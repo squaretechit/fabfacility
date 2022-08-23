@@ -1,0 +1,172 @@
+/* First Section */
+.service-banner {
+    background-image: url(/static/img/theme/service/service-banner.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 170px 10px 170px 10px;
+    height: 420px;
+}
+
+.service-banner h1 {
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.service-banner-description {
+    margin-top: 30px;
+    width: 60%;
+}
+
+.service-banner-description p {
+    font-size: 17px;
+    line-height: 32px;
+}
+
+@media all and (max-width:991px) {
+    .service-banner-description {
+        width: 100%;
+    }
+}
+
+/* Second Section */
+
+.service-scnd-rt-srt-titl-img {
+    height: 50px;
+    width: 50px;
+}
+
+.service-scnd-rt-srt-titl p {
+    color: var(--first-color);
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.service-sec-titl {
+    line-height: 52px;
+    font-weight: 700;
+}
+
+.service-sec-des {
+    line-height: 30px;
+}
+
+.service-sec-blt {
+    margin: 0;
+    padding: 0;
+}
+
+.service-sec-blt li {
+    list-style-type: none;
+    position: relative;
+    line-height: 30px;
+    margin-left: 15px;
+}
+
+.service-sec-blt li::before {
+    content: '';
+    background-color: var(--second-color) !important;
+    position: absolute;
+    top: 0.7em;
+    left: -1em;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 100%;
+}
+
+/* Third Section */
+
+.about-company-left-part {
+    padding-right: 40px;
+}
+
+.about-company-sub-title {
+    font-weight: 600;
+    color: var(--first-color);
+    line-height: 28px;
+}
+
+.about-company-title {
+    line-height: 50px;
+    margin-bottom: 31px;
+    font-weight: 700;
+}
+
+.about-company-content {
+    line-height: 30px;
+}
+
+.about-company-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.about-company-list li {
+    position: relative;
+    margin-top: 8px;
+}
+
+.about-company-list li i {
+    margin-right: 10px;
+    color: var(--first-color);
+}
+
+
+.home-abut-sec-img img {
+    height: 100%;
+    width: 100%;
+}
+
+/* Fourth Section */
+
+
+.service-scnd-rt-srt-titl-img {
+    height: 50px;
+    width: 50px;
+}
+
+.service-scnd-rt-srt-titl p {
+    color: var(--first-color);
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.service-choose-box:hover .service-choose-box-img {
+    transition: 1s;
+    margin-left: 25px;
+}
+
+.service-choose-box-img {
+    height: 80px;
+    width: 80px;
+}
+
+.service-choose-box-img img {
+    height: 100%;
+    width: 100%;
+}
+
+.service-choose-box-title {
+    line-height: 32px;
+    font-weight: 700;
+}
+
+.service-choose-box-des {
+    line-height: 32px;
+}
+
+.service-fourth-title {
+    line-height: 60px;
+    font-weight: 700;
+}
+
+.service-fourth-img {
+    margin-bottom: 20px;
+}

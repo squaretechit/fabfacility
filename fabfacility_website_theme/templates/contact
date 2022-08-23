@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/theme/contact.css' %}">
+{% endblock %}
+{% block content %}
+<!-- First Section -->
+<section class="contact-banner d-flex align-items-center">
+    <div class="container">
+        <h1 class="fs-1">Contact Us</h1>
+        <div class="contact-banner-description">
+            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Amet voluptatibus consequatur laborum iste odio blanditiis? Nihil quia 
+                maiores sunt laboriosam reiciendis consequuntur consequatur molestias 
+                cum quisquam animi. Corrupti, laboriosam dolores.</p>
+        </div>
+    </div>
+</section>
+<!-- Second Section -->
+<section class="py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-6 py-5" data-aos-delay="50" data-aos="fade-right" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+                <h2 class="fs-2 fw-bold mb-3">Get In Touch</h2>
+                <p class="mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Tempore unde nesciunt, ducimus aspernatur iure eos aperiam repudiandae! 
+                    Deserunt facilis nostrum labore placeat voluptatem quae reiciendis nesciunt 
+                    ex? Quibusdam, placeat mollitia.</p>
+                <div class="get-touch-description">
+                    <div class="mb-4 d-flex align-items-center">
+                        <div class="gtd-icon me-3">
+                            <img loading="lazy" class="img-fluid" src="{% static 'img/theme/contact/contact-address.webp' %}"
+                                alt="Address picture">
+                        </div>
+                        <div class="gtd-info">
+                            <p class="mb-0 fs-6 fw-bold">Visit Us</p>
+                            <p class="mb-0">Old Buffalo Street <br>
+                                #205 Australia</p>
+                        </div>
+                    </div>
+                    <div class="mb-4 d-flex align-items-center">
+                        <div class="gtd-icon me-3">
+                            <img loading="lazy" class="img-fluid" src="{% static 'img/theme/contact/contact-mail.webp' %}"
+                                alt="Address picture">
+                        </div>
+                        <div class="gtd-info">
+                            <p class="mb-0 fs-6 fw-bold">Mail Us</p>
+                            <p class="mb-0">support@fabfacility.com.au</p>
+                        </div>
+                    </div>
+                    <div class="mb-4 d-flex align-items-center">
+                        <div class="gtd-icon me-3">
+                            <img loading="lazy" class="img-fluid" src="{% static 'img/theme/contact/contact-phone.webp' %}"
+                                alt="Address picture">
+                        </div>
+                        <div class="gtd-info">
+                            <p class="mb-0 fs-6 fw-bold">Phone</p>
+                            <p class="mb-0">(+880) - 1775963777</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 py-5" data-aos-delay="50" data-aos="fade-left" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+                <h2 class="fs-4 fw-bold text-center mb-5">Drop Us a Line</h2>
+                {% if messages %}
+                    {% for message in messages %}
+                        {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                            <div class="alert alert-success" role="alert">
+                                <div class="text-center">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="72px" height="72px" data-ux="Icon"
+                                        class="x-el x-el-svg c2-1 c2-2 c2-t c2-u c2-2d c2-9n c2-m c2-w c2-3 c2-4 c2-5 c2-6 c2-7 c2-8 x-d-ux">
+                                        <path fill-rule="evenodd"
+                                            d="M12 4a8 8 0 0 1 8 8 8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm0 1.958c-3.316 0-6.014 2.71-6.014 6.042S8.684 18.042 12 18.042c3.315 0 6.013-2.71 6.013-6.042S15.315 5.958 12 5.958zm3.613 4.32l.175.19-.196.168-4.844 4.205-.182.157-.164-.174-2.315-2.437-.177-.188.193-.17 1.123-.992.185-.163.166.182 1.097 1.166 3.584-3.066.183-.155.162.177 1.01 1.1z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <p class="text-center">{{ message }}</p>
+                            </div>
+                        {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                            <div class="alert alert-danger" role="alert">
+                                <p class="text-center">{{ message }}</p>
+                            </div>
+                    {% endif %}
+                    {% endfor %}
+                {% else %}
+                    <form class="main-contact-form" action="{% url 'contact' %}" method="post" novalidate>
+                        {% csrf_token %}
+                        {{ form.nonefield_errors }}
+                        <div class="row g-2 mb-3">
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    {{ form.name }}
+                                    <label for="id_name">{{ form.name.label }}</label>
+                                    {{ form.name.errors }}
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    {{ form.email }}
+                                    <label for="id_email">{{ form.email.label }}</label>
+                                    {{ form.email.errors }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-2 mb-3">
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    {{ form.phone }}
+                                    <label for="id_phone">{{ form.phone.label }}</label>
+                                    {{ form.phone.errors }}
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    {{ form.service }}
+                                    <label for="id_service">{{ form.service.label }}</label>
+                                    {{ form.service.errors }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-floating">
+                            {{ form.message }}
+                            <label for="id_message">{{ form.message.label }}</label>
+                            {{ form.message.errors }}
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="mt-5 btn btn-fab-facility">Submit Now</button>
+                        </div>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Third Section -->
+<section class="contact-map">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.2757235952954!2d151.21310801569132!3d-33.85678438065961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae665e892fdd%3A0x3133f8d75a1ac251!2sSydney%20Opera%20House!5e0!3m2!1sen!2sbd!4v1644693053315!5m2!1sen!2sbd"
+        allowfullscreen="yes" loading="lazy"></iframe>
+</section>
+{% endblock %}

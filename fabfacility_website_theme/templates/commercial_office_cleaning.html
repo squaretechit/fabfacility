@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Commercial/Office Cleaning{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/theme/service.css' %}">
+{% endblock %}
+{% block content %}
+<!-- First Section -->
+<section class="service-banner d-flex align-items-center">
+    <div class="container">
+        <h1 class="fs-1">Commercial/Office Cleaning</h1>
+        <div class="service-banner-description">
+            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Amet voluptatibus consequatur laborum iste odio blanditiis? Nihil quia 
+                maiores sunt laboriosam reiciendis consequuntur consequatur molestias 
+                cum quisquam animi. Corrupti, laboriosam dolores.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Second Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 py-5" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="50" data-aos="fade-right">
+                <div class="service-scnd-left-img">
+                    <img loading="lazy" class="img-fluid" src="{% static 'img/theme/service/service-second-left.webp' %}"
+                        alt="service second left images">
+                </div>
+            </div>
+            <div class="col-lg-6 py-5" data-aos="fade-left" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="50">
+                <div class="service-scnd-rt-srt-titl d-flex align-items-center mb-4">
+                    <div class="service-scnd-rt-srt-titl-img me-3">
+                        <img loading="lazy" class="img-fluid" src="{% static 'img/theme/about/about-scnd-right-hand-image.webp' %}"
+                            alt="service second right image">
+                    </div>
+                    <p class="mb-0">house clening</p>
+                </div>
+                <h2 class="fs-1 service-sec-titl mb-5">We Are Committed To Cleaning Excellence</h2>
+                <p class="mb-4 service-sec-des">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Labore voluptates ducimus animi neque modi, obcaecati consectetur. Beatae vero quisquam neque
+                    laboriosam quia nemo corporis animi, aut hic quas ut laudantium.</p>
+                <ul class="service-sec-blt mb-5">
+                    <li>We are always ensure to give our best for our customer.</li>
+                    <li>Give professional support by our professional.</li>
+                    <li>Our mission is to provide quality product.</li>
+                </ul>
+                <a href="{% url 'contact' %}" class="btn btn-fab-facility">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Third Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center flex-wrap-reverse">
+            <div class="col-lg-6 about-company-left-part py-5" data-aos="fade-right" data-aos-offset="500" data-aos-duration="1000" data-aos-delay="50" data-aos-anchor-placement="top-bottom">
+                <div class="service-scnd-rt-srt-titl d-flex align-items-center mb-4">
+                    <div class="service-scnd-rt-srt-titl-img me-3">
+                        <img loading="lazy" class="img-fluid" src="{% static 'img/theme/about/about-scnd-right-hand-image.webp' %}"
+                            alt="service second right image">
+                    </div>
+                    <p class="mb-0">Includ Services</p>
+                </div>
+                <p class="about-company-title fs-1">Your House is in Safe Trustworthy Hands.</p>
+                <p class="about-company-content mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde
+                    voluptas
+                    reiciendis adipisci. Magni, quia voluptatem aliquid vero iusto praesentium
+                    saepe inventore fugiat alias rem nobis cumque fuga totam facere id!</p>
+                <ul class="about-company-list">
+                    <li><i class="fi fi-rr-broom"></i>
+                        We are always ensure to give our best for our customer.</li>
+                    <li><i class="fi fi-rr-broom"></i>
+                        Give professional support by our professional.</li>
+                    <li><i class="fi fi-rr-broom"></i>
+                        Our mission is to provide quality product.</li>
+                </ul>
+                <div class="text-start">
+                    <a href="{% url 'contact' %}" class="btn btn-fab-facility mt-4 text-uppercase">Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-6 py-5 about-company-right-part" data-aos="fade-left" data-aos-offset="500" data-aos-duration="1000" data-aos-delay="50" data-aos-anchor-placement="top-bottom">
+                <div class="home-abut-sec-img">
+                    <img class="img-fluid" loading="lazy" src="{% static 'img/theme/service/service-third-right.webp' %}" alt="About Company">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Fourth Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center" data-aos-delay="50" data-aos="zoom-out" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+            <div class="service-scnd-rt-srt-titl d-flex align-items-center mb-4 justify-content-center">
+                <div class="service-scnd-rt-srt-titl-img me-3">
+                    <img loading="lazy" class="img-fluid" src="{% static 'img/theme/about/about-scnd-right-hand-image.webp' %}"
+                        alt="service second right image">
+                </div>
+                <p class="mb-0">Why Choose Us</p>
+            </div>
+            <h2 class="fs-1 service-sec-titl mb-5 text-center">Six Reasons to Choose Us.</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+            <div class="col my-5" data-aos-delay="50" data-aos-offset="500" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos="fade-down-right">
+                <div class="service-choose-box">
+                    <div class="service-choose-box-img mb-4">
+                        <img loading="lazy" src="{% static 'img/theme/service/service-choose-box/business-people.webp' %}" alt="We Are Experts">
+                    </div>
+                    <p class="fs-4 service-choose-box-title">We Are Experts.</p>
+                    <p class="mb-0 service-choose-box-des">Nor is there anyone who loves or pursues or desires to obtain pain ofit self cause it is pain but occasionally.</p>
+                </div>
+            </div>
+            <div class="col my-5" data-aos-delay="50" data-aos-offset="500" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos="fade-down">
+                <div class="service-choose-box">
+                    <div class="service-choose-box-img mb-4">
+                        <img loading="lazy" src="{% static 'img/theme/service/service-choose-box/deal.webp' %}" alt="We Are Committed.">
+                    </div>
+                    <p class="fs-4 service-choose-box-title">We Are Committed.</p>
+                    <p class="mb-0 service-choose-box-des">Nor is there anyone who loves or pursues or desires to obtain pain ofit self cause it is pain but occasionally.</p>
+                </div>
+            </div>
+            <div class="col my-5" data-aos-delay="50" data-aos-offset="500" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos="fade-down-left">
+                <div class="service-choose-box">
+                    <div class="service-choose-box-img mb-4">
+                        <img loading="lazy" src="{% static 'img/theme/service/service-choose-box/package.webp' %}" alt="We Are Complete.">
+                    </div>
+                    <p class="fs-4 service-choose-box-title">We Are Complete.</p>
+                    <p class="mb-0 service-choose-box-des">Nor is there anyone who loves or pursues or desires to obtain pain ofit self cause it is pain but occasionally.</p>
+                </div>
+            </div>
+            <div class="col my-5" data-aos-delay="50" data-aos-offset="500" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos="fade-up-right">
+                <div class="service-choose-box">
+                    <div class="service-choose-box-img mb-4">
+                        <img loading="lazy" src="{% static 'img/theme/service/service-choose-box/target.webp' %}" alt="We Are Driven.">
+                    </div>
+                    <p class="fs-4 service-choose-box-title">We Are Driven.</p>
+                    <p class="mb-0 service-choose-box-des">Nor is there anyone who loves or pursues or desires to obtain pain ofit self cause it is pain but occasionally.</p>
+                </div>
+            </div>
+            <div class="col my-5" data-aos-delay="50" data-aos-offset="500" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos="fade-up">
+                <div class="service-choose-box">
+                    <div class="service-choose-box-img mb-4">
+                        <img loading="lazy" src="{% static 'img/theme/service/service-choose-box/thinking.webp' %}" alt="We Are Dedicated.">
+                    </div>
+                    <p class="fs-4 service-choose-box-title">We Are Dedicated.</p>
+                    <p class="mb-0 service-choose-box-des">Nor is there anyone who loves or pursues or desires to obtain pain ofit self cause it is pain but occasionally.</p>
+                </div>
+            </div>
+            <div class="col my-5"data-aos-delay="50" data-aos-offset="500" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos="fade-up-left">
+                <div class="service-choose-box">
+                    <div class="service-choose-box-img mb-4">
+                        <img loading="lazy" src="{% static 'img/theme/service/service-choose-box/quality.webp' %}" alt="We Are Trustworthy.">
+                    </div>
+                    <p class="fs-4 service-choose-box-title">We Are Trustworthy.</p>
+                    <p class="mb-0 service-choose-box-des">Nor is there anyone who loves or pursues or desires to obtain pain ofit self cause it is pain but occasionally.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Fifth Section -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="50" data-aos="fade-right">
+                <div class="card py-5 ps-5 pe-5">
+                    <div class="service-fourth-img">
+                        <img loading="lazy" class="img-fluid" src="{% static 'img/theme/service/service-fourth-left.webp' %}" alt="Recurring Services">
+                    </div>
+                    <p class="fs-1 service-fourth-title">Recurring Services</p>
+                    <ul class="service-sec-blt mb-5">
+                        <li>Options for daily, weekly and monthly services</li>
+                        <li>Seamless access to portfolio of services offered</li>
+                        <li>One agreement: reduces overhead and better control</li>
+                        <li>One invoice: assumes centralized and consolidated billing</li>
+                        <li>ServiceLINK: Access to cloud based Quality Assurance program</li>
+                        <li>Single point of contact to support your needs</li>
+                        <li>Analytics for response times, inspections and standards</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="50">
+                <div class="card py-5 ps-5 pe-5">
+                    <div class="service-fourth-img">
+                        <img loading="lazy" class="img-fluid" src="{% static 'img/theme/service/service-fourth-right.webp' %}" alt="Recurring Services">
+                    </div>
+                    <p class="fs-1 service-fourth-title">One-Time Service</p>
+                    <ul class="service-sec-blt mb-5">
+                        <li>Options for daily, weekly and monthly services</li>
+                        <li>Seamless access to portfolio of services offered</li>
+                        <li>One agreement: reduces overhead and better control</li>
+                        <li>One invoice: assumes centralized and consolidated billing</li>
+                        <li>ServiceLINK: Access to cloud based Quality Assurance program</li>
+                        <li>Single point of contact to support your needs</li>
+                        <li>Analytics for response times, inspections and standards</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,468 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block css %}{% endblock %}
+
+    <!-- Title And Favicon Icon -->
+    <title>Fab Facility | {% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'img/header-footer/favicon.png' %}" type="image/x-icon">
+
+</head>
+
+<body class="overflow-hidden">
+
+    <!-- Preloader Section -->
+    <section id="preloader-section">
+        <div id="preloader">
+            <img class="img-fluid" src="{% static 'img/header-footer/loader.gif' %}" alt="Loader">
+        </div>
+        <div class="preloader-content d-flex justify-content-center align-items-center">
+            <div id="animation-text" animation-word="sfab pty limited " favicon="{% static 'img/header-footer/favicon.png' %}"></div>
+        </div>
+    </section>
+
+    <!-- Drower Section -->
+
+    <div id="drower">
+        <div id="left-part-drower"></div>
+        <div id="right-part-drower"></div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="{% if request.resolver_match.url_name == 'home' %}home-fixed-header{% endif %}">
+        <!-- Top Bar -->
+        <section class="main-top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <ul
+                            class="toolbar-contact-info d-flex {% if request.resolver_match.url_name == 'home' %}text-white-home{% endif %}">
+                            <li class="toolbar-contact-email pe-3">
+                                <i class="fi fi-rr-envelope-plus"></i>
+                                <a href="mailto:support@fabfacility.com.au" class="ms-2">support@fabfacility.com.au</a>
+                            </li>
+                            <li class="toolbar-contact-phone ps-3 pe-3">
+                                <i class="fi fi-rr-phone-call"></i>
+                                <a href="tel:+8801775963777" class="ms-2">(+880)- 1775963777</a>
+                            </li>
+                            <li class="toolbar-contact-address ps-3">
+                                <i class="fi fi-rr-map-marker-home"></i>
+                                <span class="ms-2">25/2 Sydney, Australia</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-end">
+                        <ul
+                            class="toolbar-media-info d-flex {% if request.resolver_match.url_name == 'home' %}text-white-home{% endif %}">
+                            <li class="media-time pe-3">
+                                <i class="fi fi-rr-time-add"></i>
+                                <span class="ms-2">10:00 - 17:00 </span>
+                            </li>
+                            <li class="media-link ps-3">
+                                <a href="https://www.facebook.com/">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                                <a href="https://twitter.com/">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                                <a href="https://www.instagram.com/">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Main Navigation -->
+        <section class="main-menu-bar">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="logo">
+                        <a href="{% url 'home' %}">
+                            <img src="{% static 'img/header-footer/logo.png' %}" alt="Main Logo">
+                        </a>
+                    </div>
+                    <!-- Desktop Menu -->
+                    <nav>
+                        <ul class="main-nav {% if request.resolver_match.url_name == 'home' %}text-white-home{% endif %}">
+                            <li class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}"><a
+                                    href="{% url 'about' %}">About</a></li>
+                            <li class="have-sub-menu">
+                                <a>Services
+                                    <i class="bi bi-caret-down-fill"></i>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="{% if request.resolver_match.url_name == 'lease_cleaning_melbourne' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'lease_cleaning_melbourne' %}">End of Lease Cleaning Melbourne</a>
+                                    </li>
+                                    <li class="{% if request.resolver_match.url_name == 'carpet_steam_cleaning' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'carpet_steam_cleaning' %}">Carpet Steam Cleaning</a>
+                                    </li>
+                                    <li class="{% if request.resolver_match.url_name == 'after_builder_cleaning' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'after_builder_cleaning' %}">After builder Cleaning</a>
+                                    </li>
+                                    <li class="{% if request.resolver_match.url_name == 'windown_cleaning' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'windown_cleaning' %}">Windown Cleaning</a>
+                                    </li>
+                                    <li class="{% if request.resolver_match.url_name == 'oven_cleaning' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'oven_cleaning' %}">Oven Cleaning</a>
+                                    </li>
+                                    <li class="{% if request.resolver_match.url_name == 'once_off_cleaning_or_Spring_clean' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'once_off_cleaning_or_Spring_clean' %}">Once-off Cleaning/Spring Clean</a>
+                                    </li>
+                                    <li class="{% if request.resolver_match.url_name == 'pressure_washing' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'pressure_washing' %}">Pressure Washing</a>
+                                    </li>
+                                    <li class="{% if request.resolver_match.url_name == 'tile_grout_cleaning' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'tile_grout_cleaning' %}">Tile &amp; Grout Cleaning</a>
+                                    </li>
+                                    <li class="{% if request.resolver_match.url_name == 'stripping_sealing' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'stripping_sealing' %}">Stripping &amp; Sealing</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="have-sub-menu">
+                                <a>Airbnb Property
+                                    <i class="bi bi-caret-down-fill"></i>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="{% if request.resolver_match.url_name == 'airbnb_cleaning' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'airbnb_cleaning' %}">Airbnb Cleaning</a>
+                                    </li>
+                                    <li class="{% if request.resolver_match.url_name == 'airbnb_carpet_steam_cleaning' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'airbnb_carpet_steam_cleaning' %}">Carpet Steam Cleaning</a>
+                                    </li>
+                                    <li class="{% if request.resolver_match.url_name == 'handyman_services' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'handyman_services' %}">Handyman Services</a>
+                                    </li>
+                                    <li class="{% if request.resolver_match.url_name == 'pri_listing_cleaning' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'pri_listing_cleaning' %}">Pri-listing Cleaning</a>
+                                    </li>
+                                    <li class="{% if request.resolver_match.url_name == 'linens_supply' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'linens_supply' %}">Linens Supply</a>
+                                    </li>
+                                    <li class="{% if request.resolver_match.url_name == 'key_delivery' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'key_delivery' %}">Key Delivery</a>
+                                    </li>
+                                    <li class="{% if request.resolver_match.url_name == 'emergency_service' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'emergency_service' %}">24/7 Emergency Service</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="have-sub-menu">
+                                <a>For Business
+                                    <i class="bi bi-caret-down-fill"></i>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="{% if request.resolver_match.url_name == 'real_estate_agent' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'real_estate_agent' %}">Real Estate Agent</a>
+                                    </li>
+                                    <li class="{% if request.resolver_match.url_name == 'airbnb_short_stay_management' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'airbnb_short_stay_management' %}">Airbnb/ Short Stay Management</a>
+                                    </li>
+                                    <li class="{% if request.resolver_match.url_name == 'commercial_office_cleaning' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'commercial_office_cleaning' %}">Commercial/Office Cleaning</a>
+                                    </li>
+                                    <li class="{% if request.resolver_match.url_name == 'property_maintenance' %}sub-menu-active{% endif %}">
+                                        <a href="{% url 'property_maintenance' %}">Property Maintenance</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="{% if request.resolver_match.url_name == 'gallery' %}active{% endif %}"><a
+                                    href="{% url 'gallery' %}">Gallery</a></li>
+                            <li class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}"><a
+                                    href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                        <button id="mobile-menu-btn" class="btn pt-3" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <i class="fi fi-rr-menu-burger"></i>
+                        </button>
+                    </nav>
+                    <div class="user-panel">
+                        <ul>
+                            <li class="me-3">
+                                <a href="#" class="btn btn-fab-facility">Register</a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-fab-facility">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Mobile Menu -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header d-flex flex-row-reverse">
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                        <div>
+                            <a href="#" class="btn btn-fab-facility me-3">Register</a>
+                            <a href="#" class="btn btn-fab-facility">Login</a>
+                        </div>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="list-group list-group-flush mobile-menu-list">
+                            <li
+                                class="list-group-item {% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+                                <a href="{% url 'about' %}">About</a>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="accordion accordion-flush" id="serviceSubMenu">
+                                    <div class="accordion-item">
+                                        <button type="button" class="btn" data-bs-toggle="collapse"
+                                            data-bs-target="#serviceSubMenuControl" aria-expanded="false"
+                                            aria-controls="serviceSubMenuControl">
+                                            Service
+                                            <i class="bi bi-caret-down-fill ms-2"></i>
+                                        </button>
+                                        <div id="serviceSubMenuControl" class="accordion-collapse collapse"
+                                            aria-labelledby="flush-headingOne" data-bs-parent="#serviceSubMenu">
+                                            <div class="accordion-body">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'lease_cleaning_melbourne' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'lease_cleaning_melbourne' %}">End of Lease Cleaning Melbourne</a>
+                                                    </li>
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'carpet_steam_cleaning' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'carpet_steam_cleaning' %}">Carpet Steam Cleaning</a>
+                                                    </li>
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'after_builder_cleaning' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'after_builder_cleaning' %}">After builder Cleaning</a>
+                                                    </li>
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'windown_cleaning' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'windown_cleaning' %}">Windown Cleaning</a>
+                                                    </li>
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'oven_cleaning' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'oven_cleaning' %}">Oven Cleaning</a>
+                                                    </li>
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'once_off_cleaning_or_Spring_clean' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'once_off_cleaning_or_Spring_clean' %}">Once-off Cleaning/Spring Clean</a>
+                                                    </li>
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'pressure_washing' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'pressure_washing' %}">Pressure Washing</a>
+                                                    </li>
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'tile_grout_cleaning' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'tile_grout_cleaning' %}">Tile &amp; Grout Cleaning</a>
+                                                    </li>
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'stripping_sealing' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'stripping_sealing' %}">Stripping &amp; Sealing</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="accordion accordion-flush" id="airbnbSubMenu">
+                                    <div class="accordion-item">
+                                        <button type="button" class="btn" data-bs-toggle="collapse"
+                                            data-bs-target="#airbnbSubMenuControl" aria-expanded="false"
+                                            aria-controls="airbnbSubMenuControl">
+                                            Airbnb Property
+                                            <i class="bi bi-caret-down-fill ms-2"></i>
+                                        </button>
+                                        <div id="airbnbSubMenuControl" class="accordion-collapse collapse"
+                                            aria-labelledby="flush-headingOne" data-bs-parent="#airbnbSubMenu">
+                                            <div class="accordion-body">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'airbnb_cleaning' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'airbnb_cleaning' %}">Airbnb Cleaning</a>
+                                                    </li>
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'airbnb_carpet_steam_cleaning' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'airbnb_carpet_steam_cleaning' %}">Carpet Steam Cleaning</a>
+                                                    </li>
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'handyman_services' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'handyman_services' %}">Handyman Services</a>
+                                                    </li>
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'pri_listing_cleaning' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'pri_listing_cleaning' %}">Pri-listing Cleaning</a>
+                                                    </li>
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'linens_supply' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'linens_supply' %}">Linens Supply</a>
+                                                    </li>
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'key_delivery' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'key_delivery' %}">Key Delivery</a>
+                                                    </li>
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'emergency_service' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'emergency_service' %}">24/7 Emergency Service</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="accordion accordion-flush" id="businessSubMenu">
+                                    <div class="accordion-item">
+                                        <button type="button" class="btn" data-bs-toggle="collapse"
+                                            data-bs-target="#businessSubMenuControl" aria-expanded="false"
+                                            aria-controls="businessSubMenuControl">
+                                            For Business
+                                            <i class="bi bi-caret-down-fill ms-2"></i>
+                                        </button>
+                                        <div id="businessSubMenuControl" class="accordion-collapse collapse"
+                                            aria-labelledby="flush-headingOne" data-bs-parent="#businessSubMenu">
+                                            <div class="accordion-body">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'real_estate_agent' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'real_estate_agent' %}">Real Estate Agent</a>
+                                                    </li>
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'airbnb_short_stay_management' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'airbnb_short_stay_management' %}">Airbnb/ Short Stay Management</a>
+                                                    </li>
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'commercial_office_cleaning' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'commercial_office_cleaning' %}">Commercial/Office Cleaning</a>
+                                                    </li>
+                                                    <li class="list-group-item {% if request.resolver_match.url_name == 'property_maintenance' %}sub-menu-active{% endif %}">
+                                                        <a href="{% url 'property_maintenance' %}">Property Maintenance</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item {% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">
+                                <a href="{% url 'gallery' %}">Gallery</a>
+                            </li>
+                            <li class="list-group-item {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+                                <a href="{% url 'contact' %}">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- Global Body -->
+    {% block content %}{% endblock %}
+
+    <!-- Footer Section -->
+    <footer>
+        <!-- Main Footter -->
+        <div class="main-footer py-5">
+            <div class="container">
+                <div class="row" data-aos="flip-down" data-aos-offset="100" data-aos-duration="500">
+                    <div class="col-lg-4 py-3">
+                        <div class="footer-part-one">
+                            <div class="footer-logo">
+                                <img class="img-fluid" src="{% static 'img/header-footer/logo.png' %}"
+                                    alt="Footer Logo">
+                            </div>
+                            <p class="py-3">Lorem ipsum dolor sit amet adcing consect adcing eli seddo eiusmod temporing
+                                tourincididunt</p>
+                            <ul class="app-logo">
+                                <li class="me-3">
+                                    <a href="#">
+                                        <img class="img-fluid" src="{% static 'img/header-footer/android.webp' %}"
+                                            alt="Android Picture">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img class="img-fluid" src="{% static 'img/header-footer/ios.webp' %}"
+                                            alt="IOS Picture">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 py-3">
+                        <div class="footer-part-two">
+                            <h3>Contact Info</h3>
+                            <ul>
+                                <li>
+                                    <i class="fi fi-rr-map-marker-home"></i>
+                                    <span>503 Old Buffalo Street <br>
+                                        #205 Australia - 3087</span>
+                                </li>
+                                <li>
+                                    <i class="fi fi-rr-phone-call"></i>
+                                    <span>(+880) - 1775963777</span>
+                                </li>
+                                <li>
+                                    <i class="fi fi-rr-envelope-plus"></i>
+                                    <span>support@fabfacility.com.au</span>
+                                </li>
+                                <li>
+                                    <i class="fi fi-rr-time-add"></i>
+                                    <span>08:00am-6:00pm</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 py-3">
+                        <div class="footer-part-three">
+                            <h3>Subscribe to newsletter</h3>
+                            <p>Join our subscribers list to get the latest news and special offers.</p>
+                            <div id="subscription-message" role="alert" class="text-center d-none"></div>
+                            <form id="subscribe" action="{% url 'subscriptions' %}" method="post" novalidate>
+                                {% csrf_token %}
+                                <div class="form-floating mb-3">
+                                    {{ subscription_form.email }}
+                                    <label class="text-dark"
+                                        for="subscription-email">{{ subscription_form.email.label }}</label>
+                                </div>
+                                <button type="submit" class="btn btn-fab-facility w-100">Subscribe Now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="bottom-bar">
+            <div class="container py-4">
+                <div class="d-flex justify-content-between bottom-bar-info">
+                    <p class="mb-0">Copyright &copy; {% now 'Y' %} Fab Facility. Design and Developed By
+                        <a class="credit-btn text-decoration-none" href="https://squaretechit.com/">Square Tech IT</a>
+                    </p>
+                    <ul class="bottom-menu">
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Trems Of Use</a>
+                        </li>
+                        <li>
+                            <a href="#">Disclaimer</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'sitemap' %}">Sitemap</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back To Top Button -->
+    <div id="back-to-top">
+        <i class="fi fi-rr-arrow-small-up"></i>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/animation/aos.js' %}"></script>
+    <script type="module" src="{% static 'js/base.js' %}"></script>
+    {% block js %}{% endblock %}
+
+</body>
+
+</html>

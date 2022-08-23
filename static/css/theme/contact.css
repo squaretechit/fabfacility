@@ -1,0 +1,67 @@
+/* First Section */
+.contact-banner {
+    background-image: url(/static/img/theme/contact/contact-banner.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 170px 10px 170px 10px;
+    height: 420px;
+}
+
+.contact-banner h1 {
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.contact-banner-description {
+    margin-top: 30px;
+    width: 60%;
+}
+
+.contact-banner-description p {
+    font-size: 17px;
+    line-height: 32px;
+}
+
+@media all and (max-width:991px) {
+    .contact-banner-description {
+        width: 100%;
+    }
+}
+
+/* Second Section */
+
+.gtd-icon {
+    background-color: var(--first-color);
+    padding: 20px;
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+}
+
+.main-contact-form input:focus,
+.main-contact-form textarea:focus,
+.main-contact-form select:focus {
+    box-shadow: none;
+    border: 1px solid var(--first-color);
+}
+
+
+.main-contact-form textarea {
+    height: 150px !important;
+}
+
+/* Third Section */
+.contact-map {
+    padding: 0;
+    margin: 0;
+    height: 500px;
+    overflow: hidden;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Gallery{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/theme/gallery.css' %}">
+{% endblock %}
+{% block content %}
+<!-- First Section -->
+<section class="gallery-banner d-flex align-items-center">
+    <div class="container">
+        <h1 class="fs-1">Gallery</h1>
+        <div class="gallery-banner-description">
+            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Amet voluptatibus consequatur laborum iste odio blanditiis? Nihil quia
+                maiores sunt laboriosam reiciendis consequuntur consequatur molestias
+                cum quisquam animi. Corrupti, laboriosam dolores.</p>
+        </div>
+    </div>
+</section>
+
+<!-- second Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+            {% for gallery in galleries %}
+            <div class="col mt-3">
+                <a data-fancybox="FabFacilityGallery" href="{{ gallery.project_pic.url }}"
+                    data-caption="&lt;b&gt;{{ gallery.project_name }}&lt;/b&gt;&lt;br /&gt;{{ gallery.project_location }}">
+                    <div class="single-gallery-box">
+                        <div class="single-gallery-img">
+                            <img src="{{ gallery.project_pic.url }}" alt="gallery">
+                        </div>
+                        <div class="gallery-over-layout"></div>
+                        <div class="gallery-icon">
+                            <i class="bi bi-plus-circle-fill"></i>
+                        </div>
+                        <div class="single-gallery-description">
+                            <p class="mb-0 fs-5 gallery-title">{{ gallery.project_name }}</p>
+                            <p class="mb-0 gallery-addres">{{ gallery.project_location }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Third Section -->
+{% if galleries.has_other_pages %}
+<section>
+    <div class="container">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                {% if galleries.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ galleries.previous_page_number }}" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+                {% endif %}
+                {% for gallery in galleries.paginator.page_range %}
+                    {% if gallery.number == gallery %}
+                        <li class="page-item"><a class="page-link" href="#">{{ gallery }}</a></li>
+                    {% else %}
+                        <li class="page-item"><a class="page-link" href="?page={{ gallery }}">{{ gallery }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if galleries.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ galleries.next_page_number }}">Next</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</section>
+{% endif %}
+{% endblock %}
+{% block js %}
+<script>
+    $(document).ready(function () {
+        $('[data-fancybox="FabFacilityGallery"]').fancybox({
+            animationEffect: "zoom",
+            animationDuration: 366,
+            transitionEffect: "slide",
+            transitionDuration: 366,
+            keyboard: true,
+            loop: true,
+            protect: true,
+            buttons: [
+                'download',
+                'zoom',
+                'share',
+                'slideShow',
+                'fullScreen',
+                'play',
+                'thumbs',
+                'close'
+            ],
+        })
+    });
+</script>
+{% endblock %}

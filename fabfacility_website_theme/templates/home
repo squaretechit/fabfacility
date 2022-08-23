@@ -1,0 +1,487 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/theme/home.css' %}">
+{% endblock %}
+{% block content %}
+<!-- Home First Section for desktop -->
+<section class="home-first-section">
+    <div id="carouselExampleControls" class="carousel slide home-first-section-carousel" data-bs-ride="carousel">
+        <!-- data-bs-interval="false" -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img loading="lazy" src="{% static 'img/theme/home/home-slide-1.webp' %}" alt="First Slider">
+                <div class="carousel-caption d-none d-md-block home-slider-content">
+                    <p
+                        class="mb-0 fs-4 text-uppercase slider-sub-title animate__animated animate__delay-3s animate__rubberBand">
+                        Wellcome To Fab Facility</p>
+                    <p
+                        class="mb-0 text-uppercase slider-title my-3 animate__animated animate__zoomIn animate__delay-1s">
+                        Commercial</p>
+                    <p
+                        class="mb-0 text-uppercase my-3 slider-content animate__animated animate__bounceInUp animate__delay-1s">
+                        Cleaning Services</p>
+                    <a href="#"
+                        class="btn text-uppercase mt-3 btn-fab-facility animate__animated animate__backInLeft animate__delay-1s">Get
+                        Started</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img loading="lazy" src="{% static 'img/theme/home/home-slide-2.webp' %}" alt="Second Slider">
+                <div class="carousel-caption d-none d-md-block home-slider-content">
+                    <p
+                        class="mb-0 fs-4 text-uppercase slider-sub-title animate__animated animate__delay-3s animate__rubberBand">
+                        Covid-19 cleaning</p>
+                    <p
+                        class="mb-0 text-uppercase slider-title my-3 animate__animated animate__zoomIn animate__delay-1s">
+                        Professional</p>
+                    <p
+                        class="mb-0 text-uppercase my-3 slider-content animate__animated animate__bounceInUp animate__delay-1s">
+                        Sanitization Services</p>
+                    <a href="{% url 'contact' %}"
+                        class="btn text-uppercase mt-3 btn-fab-facility animate__animated animate__backInLeft animate__delay-1s">Contact
+                        us</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <div class="btn slider-change-btn">
+                <i class="bi bi-chevron-left" aria-hidden="true"></i>
+            </div>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <div class="btn slider-change-btn">
+                <i class="bi bi-chevron-right" aria-hidden="true"></i>
+            </div>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<!-- Home First Section for mobile -->
+<section class="home-first-section-mobile">
+    <div class="d-flex align-items-center justify-content-center home-first-section-banner-mobile">
+        <div class="container">
+            <div class="text-center">
+                <p class="mb-0 fs-4 text-uppercase no-slider-sub-title">Wellcome To Fab Facility</p>
+                <p class="mb-0 text-uppercase no-slider-title my-3">Commercial</p>
+                <p class="mb-0 text-uppercase my-3 no-slider-content">Cleaning Services</p>
+                <a href="{% url 'contact' %}" class="btn text-uppercase mt-3 btn-fab-facility">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Home Second Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 about-company-left-part py-5" data-aos="fade-right" data-aos-offset="500" data-aos-duration="1000" data-aos-delay="50" data-aos-anchor-placement="top-bottom">
+                <p class="fs-5 about-company-sub-title text-uppercase">About Company</p>
+                <p class="about-company-title fs-1">Leading Cleaning Agency Bring Professionalism.</p>
+                <p class="about-company-content mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde
+                    voluptas
+                    reiciendis adipisci. Magni, quia voluptatem aliquid vero iusto praesentium
+                    saepe inventore fugiat alias rem nobis cumque fuga totam facere id!</p>
+                <ul class="about-company-list">
+                    <li><i class="fi fi-rr-broom"></i>
+                        We are always ensure to give our best for our customer.</li>
+                    <li><i class="fi fi-rr-broom"></i>
+                        Give professional support by our professional.</li>
+                    <li><i class="fi fi-rr-broom"></i>
+                        Our mission is to provide quality product.</li>
+                </ul>
+                <div class="text-start">
+                    <a href="{% url 'contact' %}" class="btn btn-fab-facility mt-4 text-uppercase">Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-6 py-5 about-company-right-part" data-aos="fade-left" data-aos-offset="500" data-aos-duration="1000" data-aos-delay="50" data-aos-anchor-placement="top-bottom">
+                <div class="home-abut-sec-img">
+                    <img loading="lazy" src="{% static 'img/theme/home/home-about-section.webp' %}" alt="About Company">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Home Third Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center" data-aos-delay="50" data-aos="zoom-in" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+            <p class="text-uppercase fs-5 home-choose-sub-title">Why Choose Us</p>
+            <p class="fs-1 home-choose-title">Get Fab Facility Services & Drive <br> More Customers.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 py-5" data-aos-delay="50" data-aos-offset="500" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos="flip-left">
+                <div class="home-choose-part d-flex">
+                    <div class="home-choose-part-img me-3">
+                        <img loading="lazy" src="{% static 'img/theme/home/choose-us/business-people-1.webp' %}"
+                            alt="Choose Us first">
+                    </div>
+                    <div class="home-choose-part-content">
+                        <p class="fs-4 pb-0 home-chose-part-content-title">We Are Expert.</p>
+                        <p class="pb-0 home-chose-part-content-desc">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.</p>
+                    </div>
+                </div>
+                <div class="home-choose-part d-flex">
+                    <div class="home-choose-part-img me-3">
+                        <img loading="lazy" src="{% static 'img/theme/home/choose-us/package-1.webp' %}"
+                            alt="Choose Us Second">
+                    </div>
+                    <div class="home-choose-part-content">
+                        <p class="fs-4 pb-0 home-chose-part-content-title">We Are Complete.</p>
+                        <p class="pb-0 home-chose-part-content-desc">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.</p>
+                    </div>
+                </div>
+                <div class="home-choose-part d-flex">
+                    <div class="home-choose-part-img me-3">
+                        <img loading="lazy" src="{% static 'img/theme/home/choose-us/thinking-1.webp' %}"
+                            alt="Choose Us Third">
+                    </div>
+                    <div class="home-choose-part-content">
+                        <p class="fs-4 pb-0 home-chose-part-content-title">We Are Dedicated.</p>
+                        <p class="pb-0 home-chose-part-content-desc">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 py-5" data-aos-delay="50" data-aos-offset="500" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos="flip-up">
+                <div class="home-choose-part-middle-pic">
+                    <img loading="lazy" src="{% static 'img/theme/home/choose-us/why-choose-home-3.webp' %}"
+                        alt="Choose me">
+                </div>
+            </div>
+            <div class="col-lg-4 py-5" data-aos-delay="50" data-aos-offset="500" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos="flip-right">
+                <div class="home-choose-part d-flex">
+                    <div class="home-choose-part-img me-3">
+                        <img loading="lazy" src="{% static 'img/theme/home/choose-us/deal-1.webp' %}"
+                            alt="Choose Us fourth">
+                    </div>
+                    <div class="home-choose-part-content">
+                        <p class="fs-4 pb-0 home-chose-part-content-title">We Are Committed.</p>
+                        <p class="pb-0 home-chose-part-content-desc">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.</p>
+                    </div>
+                </div>
+                <div class="home-choose-part d-flex">
+                    <div class="home-choose-part-img me-3">
+                        <img loading="lazy" src="{% static 'img/theme/home/choose-us/target-1.webp' %}"
+                            alt="Choose Us fifth">
+                    </div>
+                    <div class="home-choose-part-content">
+                        <p class="fs-4 pb-0 home-chose-part-content-title">We Are Driven.</p>
+                        <p class="pb-0 home-chose-part-content-desc">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.</p>
+                    </div>
+                </div>
+                <div class="home-choose-part d-flex">
+                    <div class="home-choose-part-img me-3">
+                        <img loading="lazy" src="{% static 'img/theme/home/choose-us/quality-1.webp' %}"
+                            alt="Choose Us sixth">
+                    </div>
+                    <div class="home-choose-part-content">
+                        <p class="fs-4 pb-0 home-chose-part-content-title">We Are Trustworthy.</p>
+                        <p class="pb-0 home-chose-part-content-desc">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Home Fourth Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center" data-aos-delay="50" data-aos="zoom-in" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+            <p class="text-uppercase fs-5 home-choose-sub-title">Valued Services</p>
+            <p class="fs-1 home-choose-title">Managed Residential & Commercial <br> Cleaning Services For You.</p>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3">
+            <div class="col my-2">
+                <div class="easy-get-cer-card" data-aos-delay="50" data-aos-offset="500" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos="fade-down-right">
+                    <div class="easy-get-cer-card-inner">
+                        <div class="easy-get-cer-card-front-part">
+                            <div class="easy-get-ser-img">
+                                <img loading="lazy" class="img-fluid"
+                                    src="{% static 'img/theme/home/valued-services/covid.webp' %}"
+                                    alt="Valued service image">
+                            </div>
+                            <h2 class="fs-4 text-center mb-3">Covid-19 Cleaning</h2>
+                            <p class="text-center">Lorem ipsum dolor desires to obtain pain of itself who loves
+                                great amet, consectetur adipiscing elit duis at dictum.</p>
+                        </div>
+                        <div class="easy-get-cer-card-back-part">
+                            <h2 class="fs-4 text-center mb-1">Covid-19 Cleaning</h2>
+                            <p class="text-center">Lorem ipsum dolor desires to obtain pain of itself who loves
+                                great amet, consectetur adipiscing elit duis at dictum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="easy-get-cer-card" data-aos-delay="50" data-aos-offset="500" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos="fade-down">
+                    <div class="easy-get-cer-card-inner">
+                        <div class="easy-get-cer-card-front-part">
+                            <div class="easy-get-ser-img text-center">
+                                <img loading="lazy" class="img-fluid"
+                                    src="{% static 'img/theme/home/valued-services/kitchen.webp' %}"
+                                    alt="Valued service image">
+                            </div>
+                            <h2 class="fs-4 text-center mb-3">Kitchen Cleaning</h2>
+                            <p class="text-center">Lorem ipsum dolor desires to obtain pain of itself who loves great amet,
+                                consectetur adipiscing elit duis at dictum.</p>
+                        </div>
+                        <div class="easy-get-cer-card-back-part">
+                            <h2 class="fs-4 text-center mb-3">Kitchen Cleaning</h2>
+                            <p class="text-center">Lorem ipsum dolor desires to obtain pain of itself who loves great amet,
+                                consectetur adipiscing elit duis at dictum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="easy-get-cer-card" data-aos-delay="50" data-aos-offset="500" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos="fade-down-left">
+                    <div class="easy-get-cer-card-inner">
+                        <div class="easy-get-cer-card-front-part">
+                            <div class="easy-get-ser-img text-center">
+                                <img loading="lazy" class="img-fluid"
+                                    src="{% static 'img/theme/home/valued-services/office.webp' %}"
+                                    alt="Valued service image">
+                            </div>
+                            <h2 class="fs-4 text-center mb-3">Office Cleaning</h2>
+                            <p class="text-center">Lorem ipsum dolor desires to obtain pain of itself who loves great amet,
+                                consectetur adipiscing elit duis at dictum.</p>
+                        </div>
+                        <div class="easy-get-cer-card-back-part">
+                            <h2 class="fs-4 text-center mb-3">Office Cleaning</h2>
+                            <p class="text-center">Lorem ipsum dolor desires to obtain pain of itself who loves great amet,
+                                consectetur adipiscing elit duis at dictum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="easy-get-cer-card" data-aos-delay="50" data-aos-offset="500" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos="fade-up-right">
+                    <div class="easy-get-cer-card-inner">
+                        <div class="easy-get-cer-card-front-part">
+                            <div class="easy-get-ser-img">
+                                <img loading="lazy" class="img-fluid"
+                                    src="{% static 'img/theme/home/valued-services/window.webp' %}"
+                                    alt="Valued service image">
+                            </div>
+                            <h2 class="fs-4 text-center mb-3">Window Cleaning</h2>
+                            <p class="text-center">Lorem ipsum dolor desires to obtain pain of itself who loves great amet,
+                                consectetur adipiscing elit duis at dictum.</p>
+                        </div>
+                        <div class="easy-get-cer-card-back-part">
+                            <h2 class="fs-4 text-center mb-3">Window Cleaning</h2>
+                            <p class="text-center">Lorem ipsum dolor desires to obtain pain of itself who loves great amet,
+                                consectetur adipiscing elit duis at dictum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="easy-get-cer-card" data-aos-delay="50" data-aos-offset="500" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos="fade-up">
+                    <div class="easy-get-cer-card-inner">
+                        <div class="easy-get-cer-card-front-part">
+                            <div class="easy-get-ser-img text-center">
+                                <img loading="lazy" class="img-fluid"
+                                    src="{% static 'img/theme/home/valued-services/carpet.webp' %}"
+                                    alt="Valued service image">
+                            </div>
+                            <h2 class="fs-4 text-center mb-3">Carpet Cleaning</h2>
+                            <p class="text-center">Lorem ipsum dolor desires to obtain pain of itself who loves great amet,
+                                consectetur adipiscing elit duis at dictum.</p>
+                        </div>
+                        <div class="easy-get-cer-card-back-part">
+                            <h2 class="fs-4 text-center mb-3">Carpet Cleaning</h2>
+                            <p class="text-center">Lorem ipsum dolor desires to obtain pain of itself who loves great amet,
+                                consectetur adipiscing elit duis at dictum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="easy-get-cer-card" data-aos-delay="50" data-aos-offset="500" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos="fade-up-left">
+                    <div class="easy-get-cer-card-inner">
+                        <div class="easy-get-cer-card-front-part">
+                            <div class="easy-get-ser-img text-center">
+                                <img loading="lazy" class="img-fluid"
+                                    src="{% static 'img/theme/home/valued-services/toilet.webp' %}"
+                                    alt="Valued service image">
+                            </div>
+                            <h2 class="fs-4 text-center mb-3">Toilet Cleaning</h2>
+                            <p class="text-center">Lorem ipsum dolor desires to obtain pain of itself who loves great amet,
+                                consectetur adipiscing elit duis at dictum.</p>
+                        </div>
+                        <div class="easy-get-cer-card-back-part">
+                            <h2 class="fs-4 text-center mb-3">Toilet Cleaning</h2>
+                            <p class="text-center">Lorem ipsum dolor desires to obtain pain of itself who loves great amet,
+                                consectetur adipiscing elit duis at dictum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Home Fifth Section -->
+<section class="py-5 home-testimonial">
+    <div class="container">
+        <div class="text-center" data-aos-delay="50" data-aos="zoom-out" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+            <p class="text-uppercase fs-5 testimonial-sub-title">Testimonials</p>
+            <p class="fs-1 home-choose-title text-white">Whats Our Valued Customers <br> Saying About Us.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="py-5">
+            <div class="owl-carousel owl-theme" data-aos-delay="50" data-aos="zoom-in" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+                <div class="home-testimonial-box">
+                    <div class="home-testimonial-img">
+                        <img src="{% static 'img/theme/about/testimonial/qoute_icon3.webp' %}" alt="Qoute Icon">
+                    </div>
+                    <p class="review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptatem,
+                        maxime odit asperiores numquam, quibusdam omnis optio obcaecati veritatis assumenda quas,
+                        iusto error amet enim repellendus nemo. Veniam, repudiandae fugit!</p>
+                    <div class="review-img">
+                        <img src="{% static 'img/theme/about/testimonial/review/5star.png' %}" alt="Five Start">
+                    </div>
+                    <p class="fs-5 mb-0 reviewer-name">AJ Sementilli</p>
+                    <p class="mb-0 reviewer-title">Business Analyst of Devsdesign</p>
+                </div>
+                <div class="home-testimonial-box">
+                    <div class="home-testimonial-img">
+                        <img src="{% static 'img/theme/about/testimonial/qoute_icon3.webp' %}" alt="Qoute Icon">
+                    </div>
+                    <p class="review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptatem,
+                        maxime odit asperiores numquam, quibusdam omnis optio obcaecati veritatis assumenda quas,
+                        iusto error amet enim repellendus nemo. Veniam, repudiandae fugit!</p>
+                    <div class="review-img">
+                        <img src="{% static 'img/theme/about/testimonial/review/5star.png' %}" alt="Five Start">
+                    </div>
+                    <p class="fs-5 mb-0 reviewer-name">AJ Sementilli</p>
+                    <p class="mb-0 reviewer-title">Business Analyst of Devsdesign</p>
+                </div>
+                <div class="home-testimonial-box">
+                    <div class="home-testimonial-img">
+                        <img src="{% static 'img/theme/about/testimonial/qoute_icon3.webp' %}" alt="Qoute Icon">
+                    </div>
+                    <p class="review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptatem,
+                        maxime odit asperiores numquam, quibusdam omnis optio obcaecati veritatis assumenda quas,
+                        iusto error amet enim repellendus nemo. Veniam, repudiandae fugit!</p>
+                    <div class="review-img">
+                        <img src="{% static 'img/theme/about/testimonial/review/5star.png' %}" alt="Five Start">
+                    </div>
+                    <p class="fs-5 mb-0 reviewer-name">AJ Sementilli</p>
+                    <p class="mb-0 reviewer-title">Business Analyst of Devsdesign</p>
+                </div>
+                <div class="home-testimonial-box">
+                    <div class="home-testimonial-img">
+                        <img src="{% static 'img/theme/about/testimonial/qoute_icon3.webp' %}" alt="Qoute Icon">
+                    </div>
+                    <p class="review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptatem,
+                        maxime odit asperiores numquam, quibusdam omnis optio obcaecati veritatis assumenda quas,
+                        iusto error amet enim repellendus nemo. Veniam, repudiandae fugit!</p>
+                    <div class="review-img">
+                        <img src="{% static 'img/theme/about/testimonial/review/5star.png' %}" alt="Five Start">
+                    </div>
+                    <p class="fs-5 mb-0 reviewer-name">AJ Sementilli</p>
+                    <p class="mb-0 reviewer-title">Business Analyst of Devsdesign</p>
+                </div>
+                <div class="home-testimonial-box">
+                    <div class="home-testimonial-img">
+                        <img src="{% static 'img/theme/about/testimonial/qoute_icon3.webp' %}" alt="Qoute Icon">
+                    </div>
+                    <p class="review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptatem,
+                        maxime odit asperiores numquam, quibusdam omnis optio obcaecati veritatis assumenda quas,
+                        iusto error amet enim repellendus nemo. Veniam, repudiandae fugit!</p>
+                    <div class="review-img">
+                        <img src="{% static 'img/theme/about/testimonial/review/5star.png' %}" alt="Five Start">
+                    </div>
+                    <p class="fs-5 mb-0 reviewer-name">AJ Sementilli</p>
+                    <p class="mb-0 reviewer-title">Business Analyst of Devsdesign</p>
+                </div>
+                <div class="home-testimonial-box">
+                    <div class="home-testimonial-img">
+                        <img src="{% static 'img/theme/about/testimonial/qoute_icon3.webp' %}" alt="Qoute Icon">
+                    </div>
+                    <p class="review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptatem,
+                        maxime odit asperiores numquam, quibusdam omnis optio obcaecati veritatis assumenda quas,
+                        iusto error amet enim repellendus nemo. Veniam, repudiandae fugit!</p>
+                    <div class="review-img">
+                        <img src="{% static 'img/theme/about/testimonial/review/5star.png' %}" alt="Five Start">
+                    </div>
+                    <p class="fs-5 mb-0 reviewer-name">AJ Sementilli</p>
+                    <p class="mb-0 reviewer-title">Business Analyst of Devsdesign</p>
+                </div>
+                <div class="home-testimonial-box">
+                    <div class="home-testimonial-img">
+                        <img src="{% static 'img/theme/about/testimonial/qoute_icon3.webp' %}" alt="Qoute Icon">
+                    </div>
+                    <p class="review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptatem,
+                        maxime odit asperiores numquam, quibusdam omnis optio obcaecati veritatis assumenda quas,
+                        iusto error amet enim repellendus nemo. Veniam, repudiandae fugit!</p>
+                    <div class="review-img">
+                        <img src="{% static 'img/theme/about/testimonial/review/5star.png' %}" alt="Five Start">
+                    </div>
+                    <p class="fs-5 mb-0 reviewer-name">Md Sharif Foysal Shoron</p>
+                    <p class="mb-0 reviewer-title">Business Analyst of Devsdesign</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block js %}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Flip Card
+        let mainFlipBox = document.querySelectorAll('.easy-get-cer-card'),
+            innerFlipBox = document.querySelectorAll('.easy-get-cer-card-inner');
+        for (let flip_i = 0; flip_i < mainFlipBox.length; flip_i++) {
+            mainFlipBox[flip_i].addEventListener('mouseover', () => {
+                innerFlipBox[flip_i].classList.add('make-flip');
+            });
+            mainFlipBox[flip_i].addEventListener('mouseout', () => {
+                innerFlipBox[flip_i].classList.remove('make-flip');
+            });
+        }
+
+        // Home Testimonial Section
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                lazyLoad: true,
+                margin: 10,
+                mouseDrag: true,
+                touchDrag: true,
+                nav: false,
+                center: true,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            })
+        });
+    });
+</script>
+{% endblock %}

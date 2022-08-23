@@ -1,0 +1,261 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/theme/about.css' %}">
+{% endblock %}
+{% block content %}
+<!-- First Section -->
+<section class="about-banner d-flex align-items-center">
+    <div class="container">
+        <h1 class="fs-1">About Us</h1>
+        <div class="about-banner-description">
+            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Et blanditiis laudantium optio maxime dicta deleniti, tempore a eos at culpa,
+                libero odit non deserunt sunt, fugiat quibusdam illo quam sed!</p>
+        </div>
+    </div>
+</section>
+
+<!-- Second Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-6 py-5" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="50" data-aos="fade-right">
+                <div class="about-scnd-left-img">
+                    <img loading="lazy" class="img-fluid" src="{% static 'img/theme/about/about-scnd-left-image.webp' %}"
+                        alt="About second left images">
+                </div>
+            </div>
+            <div class="col-lg-6 py-5" data-aos="fade-left" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="50">
+                <div class="about-scnd-rt-srt-titl d-flex align-items-center mb-4">
+                    <div class="about-scnd-rt-srt-titl-img me-3">
+                        <img loading="lazy" class="img-fluid" src="{% static 'img/theme/about/about-scnd-right-hand-image.webp' %}"
+                            alt="About second right image">
+                    </div>
+                    <p class="mb-0">About Company</p>
+                </div>
+                <h2 class="fs-1 abut-sec-titl mb-5">Fab Facility World Leading Cleaning Agency</h2>
+                <p class="mb-4 abut-sec-des">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Labore voluptates ducimus animi neque modi, obcaecati consectetur. Beatae vero quisquam neque
+                    laboriosam quia nemo corporis animi, aut hic quas ut laudantium.</p>
+                <ul class="abut-sec-blt mb-5">
+                    <li>We are always ensure to give our best for our customer.</li>
+                    <li>Give professional support by our professional.</li>
+                    <li>Our mission is to provide quality product.</li>
+                </ul>
+                <a href="{% url 'contact' %}" class="btn btn-fab-facility">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Third Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-between flex-wrap-reverse">
+            <div class="col-lg-6 py-5" data-aos="fade-right" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="50">
+                <div class="about-scnd-rt-srt-titl d-flex align-items-center mb-4">
+                    <div class="about-scnd-rt-srt-titl-img me-3">
+                        <img loading="lazy" class="img-fluid" src="{% static 'img/theme/about/about-scnd-right-hand-image.webp' %}"
+                            alt="About second right image">
+                    </div>
+                    <p class="mb-0">Why Choose Us</p>
+                </div>
+                <h2 class="fs-1 abut-sec-titl mb-5">There Some Reasons to Hire The Fab Facility</h2>
+                <div class="abut-third-sec-card d-flex">
+                    <div class="abut-third-sec-card-srvcs-icon me-3">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                    <div class="abut-third-sec-card-body">
+                        <h4 class="fs-4">Top-Rated Company</h4>
+                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quo aliquam
+                            aliquid saepe
+                            quasi laboriosam atque in.</p>
+                    </div>
+                </div>
+                <div class="abut-third-sec-card d-flex">
+                    <div class="abut-third-sec-card-srvcs-icon me-3">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                    <div class="abut-third-sec-card-body">
+                        <h4 class="fs-4">Superior Quality</h4>
+                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quo aliquam
+                            aliquid saepe
+                            quasi laboriosam atque in.</p>
+                    </div>
+                </div>
+                <div class="abut-third-sec-card d-flex">
+                    <div class="abut-third-sec-card-srvcs-icon me-3">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                    <div class="abut-third-sec-card-body">
+                        <h4 class="fs-4">Eco-Friendly Products</h4>
+                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quo aliquam
+                            aliquid saepe
+                            quasi laboriosam atque in.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 py-5" data-aos="fade-left" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="50">
+                <div class="about-third-right-img">
+                    <img loading="lazy" class="img-fluid" src="{% static 'img/theme/about/third-section-about-right-pic.webp' %}"
+                        alt="About third right image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Fourth Section -->
+<section class="testimonial-sec py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 py-5" data-aos="fade-right" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="50">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonial-box">
+                                <div class="testimonial-picture">
+                                    <img loading="lazy" src="{% static 'img/theme/about/testimonial/testimonial_long_image.webp' %}" alt="First Image">
+                                </div>
+                                <div class="testimonial-content-box">
+                                    <p class="testimonial-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, fugiat 
+                                        numquam veniam labore temporibus fuga eaque corporis quisquam minima rerum saepe impedit rem quae 
+                                        sequi corrupti id aut excepturi tempora!</p>
+                                    <div class="qoute-and-job-title d-flex justify-content-between align-items-center">
+                                        <div class="title-admin-job">
+                                            <h5 class="fs-4">Alas Jhon</h5>
+                                            <p class="testimonial-user-job-title mb-0">Digital Marketers</p>
+                                        </div>
+                                        <img loading="lazy" src="{% static 'img/theme/about/testimonial/qoute_icon3.webp' %}" alt="Qoute Icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-box">
+                                <div class="testimonial-picture">
+                                    <img loading="lazy" src="{% static 'img/theme/about/testimonial/testimonial_long_image2.webp' %}" alt="Second Image">
+                                </div>
+                                <div class="testimonial-content-box">
+                                    <p class="testimonial-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, fugiat 
+                                        numquam veniam labore temporibus fuga eaque corporis quisquam minima rerum saepe impedit rem quae 
+                                        sequi corrupti id aut excepturi tempora!</p>
+                                    <div class="qoute-and-job-title d-flex justify-content-between align-items-center">
+                                        <div class="title-admin-job">
+                                            <h5 class="fs-4">Alas Jhon</h5>
+                                            <p class="testimonial-user-job-title mb-0">Digital Marketers</p>
+                                        </div>
+                                        <img loading="lazy" src="{% static 'img/theme/about/testimonial/qoute_icon3.webp' %}" alt="Qoute Icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-box">
+                                <div class="testimonial-picture">
+                                    <img loading="lazy" src="{% static 'img/theme/about/testimonial/testimonial_long_image3.webp' %}" alt="Third Image">
+                                </div>
+                                <div class="testimonial-content-box">
+                                    <p class="testimonial-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, fugiat 
+                                        numquam veniam labore temporibus fuga eaque corporis quisquam minima rerum saepe impedit rem quae 
+                                        sequi corrupti id aut excepturi tempora!</p>
+                                    <div class="qoute-and-job-title d-flex justify-content-between align-items-center">
+                                        <div class="title-admin-job">
+                                            <h5 class="fs-4">Alas Jhon</h5>
+                                            <p class="testimonial-user-job-title mb-0">Digital Marketers</p>
+                                        </div>
+                                        <img loading="lazy" src="{% static 'img/theme/about/testimonial/qoute_icon3.webp' %}" alt="Qoute Icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4 py-5" data-aos="fade-left" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="50">
+                <div class="about-scnd-rt-srt-titl d-flex align-items-center mb-4">
+                    <div class="about-scnd-rt-srt-titl-img me-3">
+                        <img loading="lazy" class="img-fluid" src="{% static 'img/theme/about/about-scnd-right-hand-image.webp' %}"
+                            alt="About second right image">
+                    </div>
+                    <p class="mb-0 testimonial-sub-title">Testimonials</p>
+                </div>
+                <h2 class="fs-1 abut-sec-titl text-white mb-4">What Our Clients Say About Us</h2>
+                <p class="mb-4 testimonial-description text-white">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Voluptas, suscipit
+                    odit ab corrupti nihil illo esse officiis perspiciatis voluptatem.</p>
+                <div class="testimonial-slider-btn d-flex">
+                    <div class="left-slider-btn me-4 carousel-control-prev" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                        <i class="bi bi-arrow-left-circle-fill" aria-hidden="true"></i>
+                        <span class="visually-hidden">Previous</span>
+                    </div>
+                    <div class="right-slider-btn carousel-control-next" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                        <i class="bi bi-arrow-right-circle-fill" aria-hidden="true"></i>
+                        <span class="visually-hidden">Next</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-animation">
+            <div class="tes-fir-ani">
+                <img loading="lazy" src="{% static 'img/theme/about/about_circle_animation3.webp' %}" alt="">
+            </div>
+            <div class="tes-sec-ani">
+                <img loading="lazy" src="{% static 'img/theme/about/about_circle_animation3.webp' %}" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Fifth Section -->
+<section class="py-5">
+    <div class="container py-5">
+        <div class="text-center" data-aos-delay="50" data-aos="zoom-out" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+            <div class="about-scnd-rt-srt-titl d-flex align-items-center mb-4 justify-content-center">
+                <div class="about-scnd-rt-srt-titl-img me-3">
+                    <img loading="lazy" class="img-fluid" src="{% static 'img/theme/about/about-scnd-right-hand-image.webp' %}"
+                        alt="About second right image">
+                </div>
+                <p class="mb-0">How It Works</p>
+            </div>
+            <h2 class="fs-1 abut-sec-titl mb-5 text-center">Easiest Way to Get Our Service</h2>
+        </div>
+        <div class="d-flex justify-content-between align-items-center py-5 flex-wrap">
+            <div class="easy-get-cer-card" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="50" data-aos="fade-down-right">
+                <div class="easy-get-ser-img">
+                    <img loading="lazy" class="img-fluid" src="{% static 'img/theme/about/easy-get-service-img.webp' %}" alt="Easy get service image">
+                </div>
+                <h2 class="fs-4 text-center mb-3">Easy Online Booking</h2>
+                <p class="text-center">Lorem ipsum dolor desires to obtain pain of itself who loves great amet, consectetur adipiscing elit duis at dictum.</p>
+            </div>
+            <div class="easy-get-cer-card" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="50" data-aos="fade-down">
+                <div class="easy-get-ser-img text-center">
+                    <img loading="lazy" class="img-fluid" src="{% static 'img/theme/about/easy-get-service-img-2.webp' %}" alt="Easy get service image">
+                </div>
+                <h2 class="fs-4 text-center mb-3">Easy Online Booking</h2>
+                <p class="text-center">Lorem ipsum dolor desires to obtain pain of itself who loves great amet, consectetur adipiscing elit duis at dictum.</p>
+            </div>
+            <div class="easy-get-cer-card" data-aos-offset="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="50" data-aos="fade-down-left">
+                <div class="easy-get-ser-img text-center">
+                    <img loading="lazy" class="img-fluid" src="{% static 'img/theme/about/easy-get-service-img-3.webp' %}" alt="Easy get service image">
+                </div>
+                <h2 class="fs-4 text-center mb-3">Easy Online Booking</h2>
+                <p class="text-center">Lorem ipsum dolor desires to obtain pain of itself who loves great amet, consectetur adipiscing elit duis at dictum.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

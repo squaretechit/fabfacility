@@ -1,0 +1,124 @@
+/* First Section */
+
+.gallery-banner {
+    background-image: url(/static/img/theme/gallery/gallery-banner.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 170px 10px 170px 10px;
+    height: 420px;
+}
+
+.gallery-banner h1 {
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.gallery-banner-description {
+    margin-top: 30px;
+    width: 60%;
+}
+
+.gallery-banner-description p {
+    font-size: 17px;
+    line-height: 32px;
+}
+
+@media all and (max-width:991px) {
+    .gallery-banner-description {
+        width: 100%;
+    }
+}
+
+/* Second Section */
+
+.single-gallery-box {
+    position: relative;
+}
+
+.single-gallery-box:hover .single-gallery-description {
+    opacity: 1;
+    visibility: visible;
+}
+
+.single-gallery-box:hover .gallery-icon {
+    opacity: 1;
+    visibility: visible;
+    right: 7%;
+}
+
+.single-gallery-box:hover .gallery-over-layout {
+    opacity: 1;
+    visibility: visible;
+    border-top: 70px solid transparent;
+    border-bottom: 100px solid var(--first-color);
+}
+
+.single-gallery-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.single-gallery-description,
+.gallery-over-layout {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.gallery-over-layout {
+    border-right: 400px solid var(--first-color);
+    border-top: 0 solid transparent;
+    border-bottom: 0 solid var(--first-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s ease;
+}
+
+.single-gallery-description {
+    padding-left: 30px;
+    padding-bottom: 30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 2s ease;
+}
+
+.gallery-title {
+    line-height: 38px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.gallery-addres {
+    color: #ffffff;
+}
+
+.gallery-icon {
+    position: absolute;
+    bottom: 32%;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 2s ease;
+}
+
+.gallery-icon i {
+    font-size: 50px;
+    color: var(--second-color);
+}
+
+/* Third Section */
+
+.pagination .page-item .page-link {
+    color: var(--first-color);
+}
+
+.pagination .page-item .page-link:hover {
+    transition: 1s;
+    color: #ffffff;
+    background-color: var(--third-color);
+}
